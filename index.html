@@ -9,17 +9,25 @@
 </head>
 <body>
     <div id ="root"> </div>
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="./App.js">
-        //Writing using JS
-        // const heading = document.createElement("h1");
-        // heading.innerHTML = "Hello from JavaScript";
+    <!-- <script type="module" src="./src/App.js">
+        // Writing using JS
+        const heading = document.createElement("h1");
+        heading.innerHTML = "Hello from JavaScript";
 
-        // const root = document.getElementById("root");
-        // root.appendChild(heading);
+        const root = document.getElementById("root");
+        root.appendChild(heading);
 
         
-    </script>
+    </script>  -->
+     <!-- remove below script since we have installed react and react-dom -->
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>  -->
+    <!-- <script>
+        //  Writing using react
+        const heading = React.createElement('h1', {}, "Hello World");
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(heading)
+    </script> -->
+    <script type="module" src="./src/App.js"></script>
 </body>
 </html>
