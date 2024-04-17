@@ -6,11 +6,10 @@ npm install -D parcel
 There are 2 types of dependencies- dev dependencies and normal dependency
 dev dependencies are required while building the project but normal dependencies are used in production also
 
-
 version with caret sign i.e. ^2.1.0 will upgrade minor version change itself
 version with tilde sign i.e. ~2.1.0 will upgrade major version change also
 
-package-lock.json-  it keeps a tract of all the versions being installed. keeps a record of exact version of that dependency
+package-lock.json- it keeps a tract of all the versions being installed. keeps a record of exact version of that dependency
 
 node_modules - contains all the code that we fetched from npm, fetches all the code of all the dependency in our system and their dependency and their dependency. - Transitive dependency
 
@@ -24,31 +23,84 @@ import React from 'react' basically imports react from node_modules
 
 In our html we are injecting App.js via "<script src="./App.js">" so it is treated as a browsers sript, it is being treated as a normal js file and normal js file do not have imports. We get the error as 'Browser scripts cannot have imports or exports.'
 
-we need to tell the browser that this file is not a  normal js file, it's a module. you add type='module' in the script to tell browser that it is a module.
+we need to tell the browser that this file is not a normal js file, it's a module. you add type='module' in the script to tell browser that it is a module.
 
 Parcel creates a dev build and hosts a local server for you it also automatically refreshes your server.
 i.e. it does HMR-Hot module replacement
-How? Parcel uses file watching algorithm 
+How? Parcel uses file watching algorithm
 
-Parcel- dev build
-    local server
-    HMR-Hot module replacement
-    file watching algorithm -written in c++
-    Caching - faster builds
-    Image optimization
-    Minification
-    bundling
-    compress
-    consistent hashing
-    code splitting
-    differential bundling - support older browsers
-    diagnostic
-    error handling
-    HTTP's
-    tree shaking
+Parcel
+Dev Build
+Local Server
+HMR = Hot Module Replacement
+File Watching Algorithm - written in C++
+Caching - Faster Builds
+Image Optimization
+Minification
+Bundling
+Compress
+Consistent Hashing
+Code Splitting
+Differential Bundling - support older browsers
+Diagnostic
+Error Handling
+HTTPs
+Tree Shaking - remove unused code
+Different dev and prod bundles
 
-npx parcel build index.html - use it to create production build
+Food Ordering App
+/\*_
+Header
+Logo
+Nav Items
+Body
+Search
+RestaurantContainer
+RestaurantCard - Img - Name of Res, Star Rating, cuisine, delery tie
+Footer
+Copyright
+Links
+Address
+Contact _/
 
+Two types of Export/Import
 
+    Default Export/Import
+        export default Component; import Component from "path";
 
+    Named Export/Import
+        export const Component; import {Component} from "path";
 
+React Hooks
+(Normal JS utility functions)
+
+    useState() - Superpowerful State Variables in react
+    useEffect()
+
+2 types Routing in web apps
+Client Side Routing
+Server Side Routing
+
+Redux Toolkit
+Install @reduxjs/toolkit and react-redux
+Build our store
+Connect our store to our app
+Slice (cartSlice)
+dispatch(action)
+Selector
+
+Types of testing (devloper)
+Unit Testing
+Integration Testing
+End to End Testing - e2e testing
+Setting up Testing in our app
+Install React Testing Library
+Installed jest
+Installed Babel dependencies
+Configure Babel
+Configure Parcel Config file to disable default babel transpilation
+Jest - npx jest --init
+Install jsdom library
+Install @babel/preset-react - to make JSX work in test cases
+Include @babel/preset-react inside my babel config
+npm i -D @testing-library/jest-dom

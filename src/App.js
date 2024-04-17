@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -6,6 +6,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import appStore from "./utils/appStore";
+import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 
 const About = lazy(() => import("./components/About"));
@@ -13,12 +14,26 @@ const Contact = lazy(() => import("./components/Contact"));
 const Cart = lazy(() => import("./components/Cart"));
 
 const AppLayout = () => {
+  const [userName, setUserName] = useState();
+
+  //Authentication
+  useEffect(() => {
+    //Make an API call and set UserName
+    const data = {
+      name: "Nishita Kumari",
+    };
+    setUserName(data.name);
+  }, []);
+
+  console.log(userName);
   return (
     <Provider store={appStore}>
-      <div className="App">
-        <Header />
-        <Outlet />
-      </div>
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <div className="app">
+          <Header />
+          <Outlet />
+        </div>
+      </UserContext.Provider>
     </Provider>
   );
 };

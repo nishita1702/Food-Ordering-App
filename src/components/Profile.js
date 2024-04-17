@@ -1,9 +1,11 @@
-const Profile = (props) => {
-  const { userName } = props;
+import { useContext } from "react";
+import UserContext from "../utils/UserContext";
+
+const Profile = () => {
+  const { loggedInUser } = useContext(UserContext);
   return (
     <div className="user-profile">
-      <h1>Name: {userName}</h1>
-      <h2>City: Bangalore</h2>
+      <h1>Name: {loggedInUser}</h1>
     </div>
   );
 };

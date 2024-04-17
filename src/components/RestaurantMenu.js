@@ -32,6 +32,7 @@ const RestaurantMenu = () => {
       <div className="mb-6 text-center">
         {cuisines.join(", ")} - {costForTwoMessage}
       </div>
+      {/* Categores Accordion */}
       {itemCategories?.map((category, index) => (
         <RestaurantCategory
           key={index}
