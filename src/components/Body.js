@@ -36,7 +36,7 @@ const Body = () => {
     );
   }
 
-  console.log("list of restraunts", listOfRestraunts);
+  console.log("list of restraunts", listOfRestraunts, filteredlistOfRestraunts);
 
   return (
     <div className="body">
@@ -56,7 +56,7 @@ const Body = () => {
             onClick={() =>
               setfilteredlistOfRestraunts(
                 listOfRestraunts?.filter((restaurant) =>
-                  restaurant?.data?.name
+                  restaurant?.info?.name
                     .toLowerCase()
                     .includes(searchText.toLowerCase())
                 )
@@ -72,7 +72,7 @@ const Body = () => {
             onClick={() => {
               setfilteredlistOfRestraunts(
                 listOfRestraunts.filter(
-                  (restaurant) => restaurant.info.avgRating >= 4
+                  (restaurant) => restaurant?.info?.avgRating >= 4
                 )
               );
             }}
