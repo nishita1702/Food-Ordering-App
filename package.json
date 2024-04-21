@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nishita1702/hello-react.git"
+    "url": "git+https://github.com/nishita1702/Food-Ordering-App.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nishita1702/hello-react/issues"
+    "url": "https://github.com/nishita1702/Food-Ordering-App/issues"
   },
-  "homepage": "https://github.com/nishita1702/hello-react#readme",
+  "homepage": "https://github.com/nishita1702/Food-Ordering-App#readme",
   "devDependencies": {
     "@babel/core": "^7.22.10",
     "@babel/preset-env": "^7.22.10",
